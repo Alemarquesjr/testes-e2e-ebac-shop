@@ -32,27 +32,21 @@ it('Deve Fazer um pedido completo na loja Ebac Shop de Ponta a Ponta' , () => {
             cy.get('.page-title') .should('contain' , 'Minha conta')
 
             cy.get('#primary-menu > .menu-item-629 > a').click()
-            cy.get('.post-2559 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
-            cy.get('.button-variable-item-M').click()
-            cy.get('.button-variable-item-Green').click()
-            cy.get('.single_add_to_cart_button').click()
-            cy.get('#primary-menu > .menu-item-629 > a').click()
-            cy.get('.post-3680 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
-            cy.get('.button-variable-item-XS').click()
-            cy.get(':nth-child(2) > .value > .variable-items-wrapper > .variable-item').click()
-            cy.get('.single_add_to_cart_button').click()
+            cy.get(':nth-child(2) > .page-numbers').click()
+            cy.addProdutos('Atlas Fitness Tank', 'M', 'Blue' , 1)
+
             cy.get('#primary-menu > .menu-item-629 > a').click()
             cy.get(':nth-child(2) > .page-numbers').click()
-            cy.get('.post-3345 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
-            cy.get('.button-variable-item-M').click()
-            cy.get('.button-variable-item-Black').click()
-            cy.get('.single_add_to_cart_button').click()
+            cy.addProdutos('Atomic Endurance Running Tee (Crew-Neck)', 'M', 'Blue', 1)
+
             cy.get('#primary-menu > .menu-item-629 > a').click()
-            cy.get(':nth-child(3) > .page-numbers').click()
-            cy.get('.post-3936 > .product-block > .block-inner > .image > .product-image > .image-hover').click()
-            cy.get('.button-variable-item-XS').click()
-            cy.get('.button-variable-item-Orange').click()
-            cy.get('.single_add_to_cart_button').click()
+            cy.get(':nth-child(2) > .page-numbers').click()
+            cy.addProdutos('Atomic Endurance Running Tee (V-neck)', 'M', 'Blue', 1)
+
+            cy.get('#primary-menu > .menu-item-629 > a').click()
+            cy.get(':nth-child(2) > .page-numbers').click()
+            cy.addProdutos('Augusta Pullover Jacket', 'M', 'Blue', 1)
+
 
             cy.get('.woocommerce-message > .button').click()
 
